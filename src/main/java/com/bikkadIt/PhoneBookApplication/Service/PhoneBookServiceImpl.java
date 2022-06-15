@@ -1,5 +1,8 @@
 package com.bikkadIt.PhoneBookApplication.Service;
 
-public class PhoneBookServiceImpl {
+import org.springframework.stereotype.Service;
+
+@Service
+public class PhoneBookServiceImpl implements PhoneBookServiceI {
 
 }

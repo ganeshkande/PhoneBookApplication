@@ -1,5 +1,8 @@
 package com.bikkadIt.PhoneBookApplication.Dao;
 
-public class PhoneBookDaoImpl {
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class PhoneBookDaoImpl implements PhoneBookDaoI {
 
 }
