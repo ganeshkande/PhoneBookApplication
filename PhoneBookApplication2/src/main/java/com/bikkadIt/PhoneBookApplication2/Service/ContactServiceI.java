@@ -1,5 +1,9 @@
 package com.bikkadIt.PhoneBookApplication2.Service;
 
-public class ContactServiceI {
+import com.bikkadIt.PhoneBookApplication2.model.ContactEntity;
+
+public interface ContactServiceI {
+	
+	boolean savecontact(ContactEntity contactEntity);
 
 }
