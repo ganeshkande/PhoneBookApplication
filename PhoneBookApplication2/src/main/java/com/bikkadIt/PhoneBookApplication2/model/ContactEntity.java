@@ -74,6 +74,17 @@ public class ContactEntity {
 				+ contactNumber + ", contactEmail=" + contactEmail + ", activeswitch=" + activeswitch + ", createdDate="
 				+ createdDate + ", updatedDate=" + updatedDate + "]";
 	}
+	public ContactEntity(Integer contactId, String contactName, String contactNumber, String contactEmail,
+			Character activeswitch, LocalDate createdDate, LocalDate updatedDate) {
+		super();
+		this.contactId = contactId;
+		this.contactName = contactName;
+		this.contactNumber = contactNumber;
+		this.contactEmail = contactEmail;
+		this.activeswitch = activeswitch;
+		this.createdDate = createdDate;
+		this.updatedDate = updatedDate;
+	}
 
 	
 	

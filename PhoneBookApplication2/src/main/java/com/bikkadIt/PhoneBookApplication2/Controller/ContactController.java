@@ -1,9 +1,12 @@
 package com.bikkadIt.PhoneBookApplication2.Controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -15,9 +18,9 @@ public class ContactController {
 	@Autowired
 	private ContactServiceI contactServiceI;
 	@PostMapping(value="/saveContact",consumes="APPLICATION/JSON")
-	public ResponseEntity<String> saveContact(@RequestBody ContactEntity contactEntity){
+	public ResponseEntity<String> saveContact(@RequestBody ContactEntity contact){
 		
-		boolean save = contactServiceI.savecontact(contactEntity);
+		boolean save = contactServiceI.savecontact(contact);
 		
 		if(save == true) {
 			
@@ -31,10 +34,26 @@ public class ContactController {
 		
 		return new ResponseEntity<String>(msg,HttpStatus.BAD_REQUEST);
 	
+		}
 	
 	}
+		//@GetMapping(value="/getAllContact",produces="APPLICATION/JSON")
+		//public ResponseEntity<List<ContactEntity>>getAllContact(){
+			
+			//List<ContactEntity> list = contactServiceI.getAllContact();
+			
+			//if(list !=null) {
+				
+				//return new ResponseEntity<List<ContactEntity>>(HttpStatus.OK);
+				
+		//	}else {
+				
+				
+			//}
+			//return null;
 	
+			
 	}
 	
-}
+//}
 
